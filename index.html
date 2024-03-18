@@ -29,7 +29,7 @@
                            <input type="text" id="firstPlus" class="form-control text-center" value="1">
                            <button class="btn btn-default"><i id="captureBtn" class="fas fa-plus"></i></button>
                         </div>
-                        <h5>$1219</h5>
+                        <h5>$ <Span id="addPrice">1219</Span></h5>
                         <img src="images/remove.png" alt="" class="remove-item">
                      </div>
                   </div>
@@ -81,12 +81,18 @@
 
 <script>
    const addPlus = document.getElementById("captureBtn");
+   
    addPlus.addEventListener("click", function(){
       // const getValue = document.getElementById("firstPlus").value;
       // const parseVal = parseFloat(getValue);
       // const addedVal = parseVal + 1;
       // document.getElementById("firstPlus").value = addedVal;
       plus("firstPlus");
+      
+      // const multiply = document.getElementById("addPrice").innerText;
+      // const float = parseFloat(multiply);
+      // const final = float * addedVal;
+      // document.getElementById("addPrice").innerText = final;
       
    })
 
@@ -112,6 +118,14 @@
       const parseVal = parseFloat(getValue);
       const addedVal = parseVal + 1;
       document.getElementById(id).value = addedVal;
+      
+
+         
+
+      multiple("addPrice", addedVal);
+
+
+      
    }
    
    // function for decreasing value for pressing minus button
@@ -121,6 +135,16 @@
       const addedVal = parseVal - 1;
       document.getElementById(id).value = addedVal;
    }
+
+
+  function multiple(id,addedVal){
+   const multiply = document.getElementById(id).innerText;
+      const float = parseFloat(multiply);
+      const final = float * addedVal;
+      document.getElementById(id).innerText = final;
+
+   }
+   
 
 
 
