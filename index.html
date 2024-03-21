@@ -48,7 +48,7 @@
                            <button id="smallBtn" class="btn btn-default"><i class="fas fa-plus"></i></button>
 
                         </div>
-                        <h5>$59</h5>
+                        <h5>$ <span id="addPrice2">59</span></h5>
                         <img src="images/remove.png" alt="" class="remove-item">
                      </div>
                   </div>
@@ -87,8 +87,17 @@
       // const parseVal = parseFloat(getValue);
       // const addedVal = parseVal + 1;
       // document.getElementById("firstPlus").value = addedVal;
-      plus("firstPlus");
+      // plus("firstPlus");
+      const getValue = document.getElementById("firstPlus").value;
+      const parseVal = parseFloat(getValue);
+      const addedVal = parseVal + 1;
+      const mult = addedVal * 1219;
+      console.log(mult);
+      document.getElementById("addPrice").innerText = mult;
+      document.getElementById("firstPlus").value = addedVal;
       
+      // const multiply = addedVal * 1219;
+      // document.getElementById("addPrice").innerText;
       // const multiply = document.getElementById("addPrice").innerText;
       // const float = parseFloat(multiply);
       // const final = float * addedVal;
@@ -98,52 +107,78 @@
 
    const addMinus = document.getElementById("captureMinus");
    addMinus.addEventListener("click", function(){
-      minus("firstPlus");
+      // minus("firstPlus");
+      const getValue = document.getElementById("firstPlus").value;
+      const parseVal = parseFloat(getValue);
+      const addedVal = parseVal - 1;
+      document.getElementById("firstPlus").value = addedVal;
+      const multi = addedVal * 1219;
+      document.getElementById("addPrice").innerText = multi;
+      
    })
 
 
    const smallPlus = document.getElementById("smallBtn");
    smallPlus.addEventListener("click", function(){
-      plus("secondPlus");
+      // plus("secondPlus");
+      const getValue2 = document.getElementById("secondPlus").value;
+      const parseVal2 = parseFloat(getValue2);
+      const addedVal2 = parseVal2 + 1;
+      const mult2 = addedVal2 * 59;
+      console.log(mult2);
+      document.getElementById("addPrice2").innerText = mult2;
+      document.getElementById("secondPlus").value = addedVal2;
    })
 
    const smallMinus = document.getElementById("minusBtn");
    smallMinus.addEventListener("click", function(){
-      minus("secondPlus");
+      // minus("secondPlus");
+      const getValue = document.getElementById("secondPlus").value;
+      const parseVal = parseFloat(getValue);
+      const addedVal = parseVal - 1;
+      document.getElementById("secondPlus").value = addedVal;
+      const mult3 = addedVal * 59;
+      document.getElementById("addPrice2").innerText = mult3;
    })
 
    // function for adding value for pressing plus button
-   function plus(id){
-      const getValue = document.getElementById(id).value;
-      const parseVal = parseFloat(getValue);
-      const addedVal = parseVal + 1;
-      document.getElementById(id).value = addedVal;
+
+
+   // function plus(id){
+   //    const getValue = document.getElementById(id).value;
+   //    const parseVal = parseFloat(getValue);
+   //    const addedVal = parseVal + 1;
+   //    document.getElementById(id).value = addedVal;
+
+   //    return  addedVal;
       
 
          
 
-      multiple("addPrice", addedVal);
+   //    // multiple("addPrice", addedVal);
+      
 
 
       
-   }
+   // }
    
    // function for decreasing value for pressing minus button
-   function minus(id){
-      const getValue = document.getElementById(id).value;
-      const parseVal = parseFloat(getValue);
-      const addedVal = parseVal - 1;
-      document.getElementById(id).value = addedVal;
-   }
+
+   // function minus(id){
+   //    const getValue = document.getElementById(id).value;
+   //    const parseVal = parseFloat(getValue);
+   //    const addedVal = parseVal - 1;
+   //    document.getElementById(id).value = addedVal;
+   // }
 
 
-  function multiple(id,addedVal){
-   const multiply = document.getElementById(id).innerText;
-      const float = parseFloat(multiply);
-      const final = float * addedVal;
-      document.getElementById(id).innerText = final;
+//   function multiple(id,addedVal){
+//    const multiply = document.getElementById(id).innerText;
+//       const float = parseFloat(multiply);
+//       const final = float * addedVal;
+//       document.getElementById(id).innerText = final;
 
-   }
+//    }
    
 
 
